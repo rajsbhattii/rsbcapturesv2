@@ -1,0 +1,30 @@
+.slideshowContainer {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  .slideTrack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    flex: 0 0 412.5px; /* 11:16 aspect ratio for 600px height (600 * 11/16 = 412.5) */
+    height: 100%;
+    position: relative;
+    padding: 0 5px; /* This adds 5px margin on left and right */
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  
