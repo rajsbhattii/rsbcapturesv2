@@ -1,6 +1,6 @@
 .slideshowContainer {
     position: relative;
-    height: 600px;
+    height: 400px;
     overflow: hidden;
   }
   
@@ -14,7 +14,7 @@
   }
   
   .slide {
-    flex: 0 0 412.5px; /* 11:16 aspect ratio for 600px height (600 * 11/16 = 412.5) */
+    flex: 0 0 285px; /* 11:16 aspect ratio for 600px height (600 * 11/16 = 412.5) */
     height: 100%;
     position: relative;
     padding: 0 5px; /* This adds 5px margin on left and right */

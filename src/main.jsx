@@ -13,7 +13,7 @@ createRoot(document.getElementById("root")).render(
       <div className="max-w-7xl mx-auto">
         {" "}
         {/* Adjusted for the new image size */}
-        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-left">rsb 2024</h1>
+        <h1 id="slideHead" className="text-4xl font-bold text-gray-900 mb-8 text-left">rsb 2024</h1>
         <div className="shadow-2xl">
           <InfiniteSlideshow images={images} interval={5000} />
         </div>
