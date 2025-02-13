@@ -17,7 +17,7 @@ const InfiniteSlideshow = ({ images, interval = 5000 }) => {
   // Create an array of image indices to display
   const imageIndices = [...images.slice(-2), ...images, ...images.slice(0, 2)]
 
-  const slideWidth = 422.5 // 11:16 aspect ratio for 600px height (412.5) + 10px for margins
+  const slideWidth = 285 // 11:16 aspect ratio for 600px height (412.5) + 10px for margins
 
   return (
     <div className={styles.slideshowContainer}>
