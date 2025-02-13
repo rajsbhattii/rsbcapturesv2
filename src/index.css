@@ -1,20 +1,30 @@
-.navbar {
-  height: 100px;
-  background-color:lightgrey;
+#cont {
+   max-width: 2000px;
+   margin:0 auto;
 }
 
-.navbar p {
-  text-align: center;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .navbar a {
   width: 100px;
-  margin-left:50px;
-  margin-right:50px;
-  font-size: larger;
-  font-family: 'League Spartan', sans-serif;
-  font-weight: 600; /* Match the weight you imported */
+  margin-left: 50px;
+  margin-right: 50px;
   font-size: 20px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
 }
 
 .navbar a:hover {
@@ -24,7 +34,13 @@
 .navbar img {
   height: auto;
   width: 100px;
-  vertical-align:middle;
+  vertical-align: middle;
+}
+
+/* Add this to ensure content below the navbar is not hidden */
+body {
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 #slideHead {
@@ -36,4 +52,53 @@
 
 .vidAlign {
   text-align: center;
+}
+
+body, html {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  height: 100%;
+}
+
+.footer {
+  background-color: lightgrey;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.social-icon {
+  margin: 0 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  color: black;  /* Changed to black */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  background-color: #ccc;
+}
+
+.social-icon:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.social-icon svg {
+  width: 20px;
+  height: 20px;
 }
