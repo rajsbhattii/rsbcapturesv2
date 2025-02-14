@@ -5,6 +5,9 @@ import Header from "./Header.jsx"
 import InfiniteSlideshow from "./Slides.jsx"
 import Footer from "./Footer.jsx"
 
+import Plyr from 'plyr';
+const player = new Plyr('#player');
+
 const images = ["/images/U (1).jpg", "/images/U (2).jpg", "/images/U (3).jpg","/images/U (4).jpg", "/images/U (5).jpg", "/images/U (6).jpg","/images/U (7).jpg", "/images/U (8).jpg", "/images/U (9).jpg","/images/U (10).jpg", "/images/U (11).jpg", "/images/U (12).jpg","/images/U (13).jpg"]
 
 createRoot(document.getElementById("root")).render(
@@ -28,7 +31,7 @@ createRoot(document.getElementById("root")).render(
       <div className="max-w-7xl mx-auto">
         <h1 id="slideHead">rsb video.</h1>
         <div className="vidAlign">
-          <iframe width="1000px" height="562.5px" src="https://www.youtube.com/embed/SblWzz--Ga8?si=X9vRaYgrbdwCMhF6&amp;controls=0"></iframe>
+          <video controls width="1100px"><source src="./public/RS3.mp4" type="video/mp4"/></video>
         </div>
       </div>
     </div>
