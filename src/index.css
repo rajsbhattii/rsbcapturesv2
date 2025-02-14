@@ -39,7 +39,7 @@
 
 /* Add this to ensure content below the navbar is not hidden */
 body {
-  padding-top: 100px;
+  /* padding-top: 100px; */
   padding-bottom: 50px;
 }
 
@@ -102,3 +102,156 @@ body, html {
   width: 20px;
   height: 20px;
 }
+.mainpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #333;
+  position: relative;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-half {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.right-half {
+  width: 715px;
+  height: 100%;
+}
+
+.rsb {
+  font-family: "League Spartan", sans-serif;
+  font-size: 5dvw;
+  color: #fff;
+  padding-left: 10%;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  object-fit: cover;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.see-more-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.see-more-wrapper:hover {
+  opacity: 0.8;
+}
+
+.see-more-text {
+  font-family: "Atkinson Hyperlegible Next", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.see-more-arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .content-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-half,
+  .right-half {
+    width: 100%;
+  }
+
+  .right-half {
+    height: 50vh;
+  }
+
+  .rsb {
+    padding: 20px;
+    text-align: center;
+    font-size: 60px;
+  }
+}
+
+.startBtns {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 15px;
+  border: 2px;
+  font-size: 2dvw;
+  font-family: "Atkinson Hyperlegible Next";
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.startBtns:hover {
+  background-color: #333;
+  color: white;
+}
+
+.btnGroup {
+  width: 350px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 60px;
+}
+
+.additional-content {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 2rem;
+}
+
+
