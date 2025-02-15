@@ -6,9 +6,6 @@ import InfiniteSlideshow from "./Slides.jsx"
 import Footer from "./Footer.jsx"
 import Starter from "./Starter.jsx"
 
-import Plyr from 'plyr';
-const player = new Plyr('#player');
-
 const images = ["/images/U (1).jpg", "/images/U (2).jpg", "/images/U (3).jpg","/images/U (4).jpg", "/images/U (5).jpg", "/images/U (6).jpg","/images/U (7).jpg", "/images/U (8).jpg", "/images/U (9).jpg","/images/U (10).jpg", "/images/U (11).jpg", "/images/U (12).jpg","/images/U (13).jpg"]
 
 createRoot(document.getElementById("top")).render(

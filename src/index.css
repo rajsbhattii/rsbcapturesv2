@@ -4,16 +4,12 @@
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 100px;
   background-color: lightgrey;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  width: 100%;
 }
 
 .navbar a {
@@ -36,7 +32,6 @@
   width: 100px;
   vertical-align: middle;
 }
-
 /* Add this to ensure content below the navbar is not hidden */
 body {
   /* padding-top: 100px; */
@@ -254,4 +249,7 @@ body, html {
   padding-top: 2rem;
 }
 
+.additional-content {
+  padding: 0 0 0 0;
+}
 
