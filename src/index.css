@@ -34,7 +34,6 @@
 }
 /* Add this to ensure content below the navbar is not hidden */
 body {
-  /* padding-top: 100px; */
   padding-bottom: 50px;
 }
 
@@ -253,3 +252,7 @@ body, html {
   padding: 0 0 0 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 0
+}
