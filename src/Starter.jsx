@@ -4,13 +4,13 @@ import { useState, useEffect } from "react"
 import { ChevronDown } from "lucide-react"
 
 const images = [
-  "/starterpage/S (1).jpg?height=600&width=715",
-  "/starterpage/S (2).jpg?height=600&width=715",
-  "/starterpage/S (3).jpg?height=600&width=715",
-  "/starterpage/S (4).jpg?height=600&width=715",
-  "/starterpage/S (5).jpg?height=600&width=715",
-  "/starterpage/S (6).jpg?height=600&width=715",
-  "/starterpage/S (7).jpg?height=600&width=715",
+  "/starterpage/S (1).webp?height=600&width=715",
+  "/starterpage/S (2).webp?height=600&width=715",
+  "/starterpage/S (3).webp?height=600&width=715",
+  "/starterpage/S (4).webp?height=600&width=715",
+  "/starterpage/S (5).webp?height=600&width=715",
+  "/starterpage/S (6).webp?height=600&width=715",
+  "/starterpage/S (7).webp?height=600&width=715",
 ]
 
 export default function Starter() {

@@ -6,7 +6,7 @@ import InfiniteSlideshow from "./Slides.jsx"
 import Footer from "./Footer.jsx"
 import Starter from "./Starter.jsx"
 
-const images = ["/images/U (1).jpg", "/images/U (2).jpg", "/images/U (3).jpg","/images/U (4).jpg", "/images/U (5).jpg", "/images/U (6).jpg","/images/U (7).jpg", "/images/U (8).jpg", "/images/U (9).jpg","/images/U (10).jpg", "/images/U (11).jpg", "/images/U (12).jpg","/images/U (13).jpg"]
+const images = ["/images/U (1).webp", "/images/U (2).webp", "/images/U (3).webp","/images/U (4).webp", "/images/U (5).webp", "/images/U (6).webp","/images/U (7).webp", "/images/U (8).webp", "/images/U (9).webp","/images/U (10).webp", "/images/U (11).webp", "/images/U (12).webp","/images/U (13).webp"]
 
 createRoot(document.getElementById("top")).render(
   <Starter/>
