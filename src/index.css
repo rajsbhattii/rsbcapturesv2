@@ -123,7 +123,7 @@ body, html {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
   object-fit: cover;
-  /* filter: blur(3px);  Add blur effect */
+  filter: brightness(75%)
 }
 
 .slide.active {
