@@ -1,5 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import "react-lazy-load-image-component/src/effects/blur.css" // Optional effect
 import styles from "./Slides.module.css"
 
 const InfiniteSlideshow = ({ images, interval = 5000 }) => {
@@ -29,7 +31,12 @@ const InfiniteSlideshow = ({ images, interval = 5000 }) => {
       >
         {imageIndices.map((image, index) => (
           <div key={index} className={styles.slide}>
-            <img src={image || "/placeholder.svg"} alt={`Slide ${index + 1}`} className={styles.image} />
+            <LazyLoadImage
+              src={image || "/placeholder.svg"} // Fallback image
+              alt={`Slide ${index + 1}`}
+              effect="blur" // Optional: add a blur effect while loading
+              className={styles.image}
+            />
           </div>
         ))}
       </div>
@@ -38,4 +45,3 @@ const InfiniteSlideshow = ({ images, interval = 5000 }) => {
 }
 
 export default InfiniteSlideshow
-

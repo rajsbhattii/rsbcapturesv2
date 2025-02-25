@@ -17,8 +17,8 @@ const images = [
 
 // Animation for fade-in and moving upwards
 const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 20, willChange: "transform, opacity" },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 createRoot(document.getElementById("top")).render(<Starter />);
@@ -32,7 +32,7 @@ createRoot(document.getElementById("root")).render(
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }} // Triggers when 20% of the section is visible
+        viewport={{ once: true, amount: 0.95}} // Triggers when 95% of the section is visible
         variants={fadeInUp}
         id="cont"
         className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8"
@@ -54,7 +54,7 @@ createRoot(document.getElementById("root")).render(
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.4}}
         variants={fadeInUp}
         id="cont"
         className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8"
@@ -62,7 +62,7 @@ createRoot(document.getElementById("root")).render(
         <div className="max-w-7xl mx-auto">
           <h1 id="slideHead">rsb video.</h1>
           <div className="vidAlign">
-            <video controls={false} width="1100px">
+            <video controls width="1100px">
               <source src="/RS3.mp4" type="video/mp4" />
             </video>
           </div>
