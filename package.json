@@ -18,6 +18,7 @@
     "react-icons": "^5.4.0",
     "react-lazy-load-image-component": "^1.6.3",
     "react-multi-carousel": "^2.8.5",
+    "react-router-dom": "^7.2.0",
     "react-scroll-motion": "^0.3.5",
     "react-slideshow-image": "^4.3.2"
   },

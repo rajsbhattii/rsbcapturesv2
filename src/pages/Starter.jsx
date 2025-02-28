@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { ChevronDown } from "lucide-react"
+import { useNavigate } from "react-router-dom" // Import useNavigate
 
 const images = [
   "/starterpage/S (1).webp?height=600&width=715",
@@ -15,6 +16,7 @@ const images = [
 
 export default function Starter() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const navigate = useNavigate() // Initialize useNavigate
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,8 +27,8 @@ export default function Starter() {
   }, [])
 
   const handleSeeMoreClick = () => {
-    // Scroll to the additional content
-    document.getElementById("additional-content").scrollIntoView({ behavior: "smooth" })
+    // Navigate to the Home page
+    navigate("/home")
   }
 
   return (
