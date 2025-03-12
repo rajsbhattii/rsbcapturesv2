@@ -1,0 +1,110 @@
+/* Reset margins to fix the gap */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar container for sticky positioning */
+.navbar-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Add shadow when scrolled */
+.navbar-container.scrolled {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Navbar styles */
+.navbar {
+  height: 100px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: height 0.3s ease;
+}
+
+/* Slightly reduce height when scrolled for a nice effect */
+.scrolled .navbar {
+  height: 80px;
+}
+
+/* All navbar items (including logo) */
+.navbar-item {
+  width: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 20px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 600;
+  text-decoration: none !important;
+  color: inherit !important;
+  position: relative;
+  transition: transform 0.3s ease;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-item:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Underline effect on hover - for all items EXCEPT logo */
+.navbar-item:not(.logo-container)::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+.navbar-item:not(.logo-container):hover::after {
+  width: 100%;
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo image */
+.logo-container img {
+  height: auto;
+  width: 100px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Media queries for basic responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px;
+    height: auto;
+  }
+
+  .navbar-item {
+    margin: 10px;
+  }
+}
+

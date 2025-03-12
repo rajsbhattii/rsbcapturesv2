@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Header from "../Header.jsx"
 import InfiniteSlideshow from "./Slides.jsx"
 import Footer from "../Footer.jsx"
+import "../Header.css"
 
 const images = [
   "/images/U (1).webp",
