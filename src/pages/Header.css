@@ -108,3 +108,10 @@ body {
   }
 }
 
+.navbar-item.active::after {
+  width: 100%; /* Show the underline for active links */
+}
+
+.navbar-item.active {
+  color: #333 !important; /* Make active links slightly darker, adjust color as needed */
+}
