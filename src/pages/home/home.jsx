@@ -1,9 +1,9 @@
 "use client"
 
-import { motion } from "framer-motion"
 import Header from "../Header.jsx"
 import InfiniteSlideshow from "./Slides.jsx"
 import Footer from "../Footer.jsx"
+import { motion } from "framer-motion"
 import "../Header.css"
 
 const images = [
@@ -22,18 +22,11 @@ const images = [
   "/images/U (13).webp",
 ]
 
-// Animation for slide-up
-const pageTransition = {
-  initial: { y: "100%", opacity: 0 },
-  animate: { y: 0, opacity: 1 },
-  exit: { y: "100%", opacity: 0 },
-  transition: { type: "tween", ease: "anticipate", duration: 0.5 },
-}
-
 function Home() {
   console.log("Home component is rendering")
   return (
-    <motion.div {...pageTransition} className="additional-content">
+    // Remove the motion.div with pageTransition - let PageTransition handle this
+    <div className="additional-content">
       <Header />
 
       {/* Photos Section */}
@@ -84,7 +77,7 @@ function Home() {
       </motion.div>
 
       <Footer />
-    </motion.div>
+    </div>
   )
 }
 

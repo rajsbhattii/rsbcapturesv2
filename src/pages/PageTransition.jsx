@@ -3,41 +3,38 @@
 import { motion } from "framer-motion"
 import { useLocation } from "react-router-dom"
 
-const pageVariants = {
+// Simple fade variants without any position changes
+const fadeVariants = {
   initial: {
     opacity: 0,
-    y: "100%",
-    scale: 1,
   },
   in: {
     opacity: 1,
-    y: 0,
-    scale: 1,
   },
   out: {
     opacity: 0,
-    y: "-100%",
-    scale: 1.0,
   },
 }
 
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 1.5,
-}
-
 export const PageTransition = ({ children }) => {
-  const { pathname } = useLocation()
+  const location = useLocation()
 
   return (
     <motion.div
-      key={pathname}
+      key={location.pathname}
       initial="initial"
       animate="in"
       exit="out"
-      variants={pageVariants}
-      transition={pageTransition}
+      variants={fadeVariants}
+      transition={{
+        duration: 0.4,
+        ease: "linear",
+      }}
+      className="fixed inset-0 w-full h-full overflow-auto"
+      style={{
+        zIndex: 1,
+        WebkitOverflowScrolling: "touch",
+      }}
     >
       {children}
     </motion.div>

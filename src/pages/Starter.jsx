@@ -31,6 +31,10 @@ export default function Starter() {
     navigate("/home")
   }
 
+  const handleNavigation = () => {
+    navigate("/automotive");
+  };
+
   return (
     <div className="mainpage">
       <div className="slideshow">
@@ -49,7 +53,7 @@ export default function Starter() {
           rsbcaptures.
         </h1>
         <div className="btnGroup">
-          <button className="startBtns">automotive.</button>
+          <button className="startBtns" onClick={handleNavigation}>automotive.</button>
           <button className="startBtns">real estate.</button>
         </div>
       </div>
