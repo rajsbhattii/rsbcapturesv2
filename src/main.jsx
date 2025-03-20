@@ -5,9 +5,10 @@ import { createRoot } from "react-dom/client"
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 import Starter from "./pages/Starter.jsx"
-import Home from "./pages/home/home.jsx"
-import { PageTransition } from "./pages/PageTransition.jsx"
+import Home from "./pages/home.jsx"
+import { PageTransition } from "./components/PageTransition.jsx"
 import Automotive from "./pages/Automotive.jsx"
+import Contact from "./pages/Contact.jsx"
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -71,7 +72,7 @@ function AnimatedRoutes() {
           path="/contact"
           element={
             <PageTransition>
-              <div>Contact Page</div>
+              <Contact/>
             </PageTransition>
           }
         />

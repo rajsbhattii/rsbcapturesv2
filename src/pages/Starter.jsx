@@ -35,6 +35,10 @@ export default function Starter() {
     navigate("/automotive");
   };
 
+  const handleRENavigation = () => {
+    navigate("/real-estate");
+  };
+
   return (
     <div className="mainpage">
       <div className="slideshow">
@@ -54,7 +58,7 @@ export default function Starter() {
         </h1>
         <div className="btnGroup">
           <button className="startBtns" onClick={handleNavigation}>automotive.</button>
-          <button className="startBtns">real estate.</button>
+          <button className="startBtns" onClick={handleRENavigation}>real estate.</button>
         </div>
       </div>
       <div className="see-more-wrapper" onClick={handleSeeMoreClick}>

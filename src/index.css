@@ -317,3 +317,26 @@ body, html {
   object-fit: cover;
 }
 
+.box {
+  width: 95vw;
+  height: 50vh;
+  background-color: lightgrey;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.footerbelow {
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+
+.emailform {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+p {
+  padding-top: 10px;
+  font-family: 'Atkinson Hyperlegible Next'
+} 

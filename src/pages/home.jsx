@@ -1,10 +1,10 @@
 "use client"
 
-import Header from "../Header.jsx"
-import InfiniteSlideshow from "./Slides.jsx"
-import Footer from "../Footer.jsx"
+import Header from "../components/Header.jsx"
+import InfiniteSlideshow from "../components/Slides.jsx"
+import Footer from "../components/Footer.jsx"
 import { motion } from "framer-motion"
-import "../Header.css"
+import "../components/Header.css"
 
 const images = [
   "/images/U (1).webp",

@@ -1,7 +1,7 @@
 "use client";
-import Header from "./Header";
+import Header from "../components/Header";
 import PhotoGrid from "../components/PhotoGrid";
-import Footer from "./Footer"
+import Footer from "../components/Footer"
 
 export default function Automotive() {
   return (
