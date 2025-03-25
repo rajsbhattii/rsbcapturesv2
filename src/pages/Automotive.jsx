@@ -2,6 +2,7 @@
 import Header from "../components/Header";
 import PhotoGrid from "../components/PhotoGrid";
 import Footer from "../components/Footer"
+import { motion } from "framer-motion"
 
 export default function Automotive() {
   return (
@@ -15,14 +16,27 @@ export default function Automotive() {
         <PhotoGrid images={A1F30} />
       </div>
       <hr></hr>
-      <div className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-        <h1 id="slideHead" className="text-4xl font-bold text-gray-900 mb-8 text-left">
-          StlthQ
-        </h1>
-        <PhotoGrid images={StlthQ} />
-      </div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.4 }}
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: "easeOut" } },
+        }}
+        id="cont"
+        className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+          <h1 id="slideHead" className="text-4xl font-bold text-gray-900 mb-8 text-left">
+            StlthQ
+          </h1>
+          <PhotoGrid images={StlthQ} />
+        </div>
+      </motion.div>
       <Footer />
     </div>
+    
   );
 }
 

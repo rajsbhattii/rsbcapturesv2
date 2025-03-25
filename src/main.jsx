@@ -9,6 +9,7 @@ import Home from "./pages/home.jsx"
 import { PageTransition } from "./components/PageTransition.jsx"
 import Automotive from "./pages/Automotive.jsx"
 import Contact from "./pages/Contact.jsx"
+import RealEstate from "./pages/RealEstate.jsx"
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -56,7 +57,7 @@ function AnimatedRoutes() {
           path="/real-estate"
           element={
             <PageTransition>
-              <div>Real Estate Page</div>
+              <RealEstate />
             </PageTransition>
           }
         />
